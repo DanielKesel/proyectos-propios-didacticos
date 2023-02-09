@@ -3,46 +3,87 @@
     <head>
         <meta charset="utf-8" />
         <title>MOSTRUOS!</title>
-        <script src="./js/monstruosElementales.js"></script>
+        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <h1>MONSTRUOS ELEMENTALES 🔥💧🛤</h1>
+        
 
         <section id="seleccionar-monstruo">
-            <h2>Elige tu monstruo con sabiduria: </h2>
 
-            <label for="hydra">Hydra</label>
-            <input type="radio" name="monstruo" id="hydra">
+            <h1 class="titulo" >MONSTRUOS ELEMENTALES 🔥💧🛤</h1>
+            <h2 class="subtitulo">Elige tu monstruo con sabiduria: </h2>
 
-            <label for="fireStar">FireStar</label>
-            <input type="radio" name="monstruo" id="fireStar">
+            <div class="tarjetas">
 
-            <label for="rocky">Rocky</label>
-            <input type="radio" name="monstruo" id="rocky">
-            
+                <input type="radio" name="monstruo" id="hydra">
+                
+                <label class ="tarjeta-de-monstruo" for="hydra">
+                    <p class="nombre-monstruo">Hydra</p>
+                    <img src="assets/hidra.png" alt="Hydra">
+                </label>
+                
+                <input type="radio" name="monstruo" id="fireStar">
+                <label class ="tarjeta-de-monstruo" for="fireStar">
+                    <p>FireStar</p>
+                    <img src="assets/firestar.png" alt="fireStar">
+                </label>
+                
+                <input type="radio" name="monstruo" id="rocky">
+                <label class ="tarjeta-de-monstruo" for="rocky">
+                    <p>Rocky</p>
+                    <img src="assets/rocky.png" alt="rocky">
+                </label>
+                
 
+            </div>
             <button id ="boton-montruo">Seleccionar</button>
+
         </section>
 
         <section id="seleccionar-ataque">
-            <h2>Elige tu ataque con estrategia: </h2>
-            <p>Tu monstruo tiene <span>3</span> vidas</p>
-            <p>El monstruo del enemigo tiene <span>3</span> vidas</p>
-            <p>
-            <button> FUEGO! 🔥🔥</button> <!-- Es una mala práctica colocar un botón fuera de un contenedor pero fue para codear algo rápido-->
-            <button> AGUA! 💧💧</button>
-            <button> TIERRA! 🛤 🛤</button>
-            </p>
-        </section>
-        <section id="mensajes"> 
-            <p>Tu monstruo ataco con FUEGO</p>
-            <p>Tu monstruo ataco con AGUA</p>
+
+            <h1 class="titulo" >MONSTRUOS ELEMENTALES 🔥💧🛤</h1>
+
+            <h2 class="subtitulo">Elige tu ataque con estrategia: </h2>
+
+            <div class="tarjetas-ataques">
+                <button id ="boton-ataque-fuego" class="botones-ataques"> FUEGO! 🔥🔥</button> <!-- Es una mala práctica colocar un botón fuera de un contenedor pero fue para codear algo rápido-->
+                <button id ="boton-ataque-agua" class="botones-ataques"> AGUA! 💧💧</button>
+                <button id ="boton-ataque-tierra" class="botones-ataques"> TIERRA! 🛤 🛤</button>
+            </div>
+
+            <div>
+                <section id="mensajes"> 
+                    <div id="resultado">¡Muchos Exitos!</div>
+                </section>
+                
+                <div class="ataques">
+                    <div class="ataques-jugador" >
+                        <p id="vida-jugador"></p>
+                        <p id ="monstruo-jugador"></p>
+                        <div id="ataques-del-Jugador"></div>               
+                    </div>
+                    
+                    <div class="ataques-enemigo">
+                        <p id="vida-enemigo"></p>
+                        <p id= "monstruo-enemigo"></p>
+                        <div id="ataques-del-enemigo"></div>    
+    
+                    </div>
+                </div>
+                
+                
+        
+                <section id="reiniciar"> 
+                    <button id="boton-reiniciar"> Reiniciar </button>
+                </section>
+            </div>
+
+            
+
         </section>
 
-        <section id="reiniciar"> 
-            <button id="boton-reinicio"> Reiniciar </button>
-        </section>
-
-
+        
+        <script src="./js/monstruosElementales.js"></script>
     </body>
 </html>

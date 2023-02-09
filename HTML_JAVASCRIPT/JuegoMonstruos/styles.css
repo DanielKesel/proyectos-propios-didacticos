@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&family=Press+Start+2P&family=Rubik+Bubbles&display=swap');
+
+
+body{
+    
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: url(./assets/fondoespacio.jpg) no-repeat center center fixed;
+    background-size: cover;
+
+}
+
+
+#seleccionar-monstruo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+    box-sizing: border-box;
+ 
+       
+}
+
+.titulo {
+    font-family: 'Press Start 2P';
+    font-size: 50px;
+    color:rgb(255, 237, 0)
+    
+}
+
+.subtitulo {
+    color:blue
+}
+
+.tarjetas, .tarjetas-ataques {
+    display: flex;
+    gap: 100px;
+}
+
+.nombre-monstruo {
+    color: aliceblue;
+}
+
+.tarjeta-de-monstruo {
+    width: 200px;
+    height: 200px;
+    background: #7fffd4;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: flex
+}
+
+
+
+.tarjeta-de-monstruo img {
+    width: 80px;
+    
+}
+
+#boton-montruo {
+  font-family: 'Poppins', sans-serif;
+  width: 180px;
+  height: 90px;
+  margin-top: 30px;
+  border-radius:20px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label{
+
+    background-color: green;
+    border: 2px solid white;
+}
+
+#seleccionar-ataque{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.botones-ataques{
+    font-family: 'Poppins', sans-serif;
+    background-color:#7fffd4; 
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    border: 2px solid white;
+    width: 180px;
+    height: 90px;
+    color: white;
+}
+
+#mensajes{
+    display: flex;
+    justify-content: center;
+    color: rgb(255, 237, 0);
+}
+
+.ataques{
+    display: grid;
+    grid-template-columns: 100px 100px;
+}
+
+#vidas-jugador, #vidas-enemigo{
+    font-size: 32px;
+    margin-bottom: 0;
+    color: rgb(255, 237, 0);
+}
+
+.ataques-jugador, .ataques-enemigo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 360px){
+    .tarjetas, .tarjetas-ataques {
+        flex-direction: column;
+    }
+}
+
